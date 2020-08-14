@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FDCD03</color>
+    <color name="colorPrimaryDark">#FDCD03</color>
+    <color name="colorAccent">#FDCD03</color>
+
+    <!--검색정렬 텍스트-->
+    <color name="text_filter_on">#000000</color>
+    <color name="text_filter_off">#A6A6A6</color>
+
+    <!--리스트뷰 맨처음 이동-->
+    <color name="btn_list_top">#FDCD03</color>
+
+    <color name="ic_imgsearch_background">#FDCD03</color>
+</resources>

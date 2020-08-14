@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:padding="8dp">
+
+    <!--썸네일-->
+    <ImageView
+        android:id="@+id/img_thumb"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_imgsearch_round"/>
+
+    <!--출처-->
+    <TextView
+        android:id="@+id/tv_siteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/img_thumb"
+        app:layout_constraintTop_toTopOf="@+id/img_thumb" />
+
+    <!--필터-->
+    <TextView
+        android:id="@+id/tv_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_dateTime"
+        app:layout_constraintStart_toStartOf="@+id/tv_siteName" />
+
+    <!--작성시간-->
+    <TextView
+        android:id="@+id/tv_dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_collection"
+        app:layout_constraintBottom_toBottomOf="@+id/img_thumb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

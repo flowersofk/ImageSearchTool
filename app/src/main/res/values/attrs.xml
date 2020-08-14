@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--클리어 버튼 입력창-->
+    <declare-styleable name="ClearEditTextView">
+        <attr name="button_clear" format="reference" />
+    </declare-styleable>
+
+</resources>

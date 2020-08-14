@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!--검색-->
+    <com.flowersofk.imagesearchtool.view.ClearEditTextView
+        android:id="@+id/et_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:hint="@string/hint_keyword"
+        android:text="한강"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        app:button_clear="@drawable/btn_clear"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/et_keyword">
+
+        <!--정렬선택-->
+        <RadioGroup
+            android:id="@+id/rg_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <!--정확도순(기본값)-->
+            <RadioButton
+                android:id="@+id/rb_accuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:drawableLeft="@drawable/selector_filter_icon"
+                android:drawablePadding="8dp"
+                android:button="@null"
+                android:text="@string/sort_accuracy"
+                android:textColor="@drawable/selector_filter_text"
+                android:checked="true"/>
+
+            <!--최신순-->
+            <RadioButton
+                android:id="@+id/rb_recency"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/selector_filter_icon"
+                android:layout_gravity="right"
+                android:drawablePadding="8dp"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/sort_recency"
+                android:textColor="@drawable/selector_filter_text"/>
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner_cat_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_imgList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ll_filter"/>
+
+    <!--최상단 이동-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_top"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:fabCustomSize="50dp"
+        android:src="@drawable/img_list_top"
+        android:backgroundTint="@color/btn_list_top"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
